@@ -1,7 +1,9 @@
 from googleapiclient.discovery import build
+import requests
 
 
 # url_base = 'https://www.youtube.com/watch?v='
+url_shorts_base = 'https://www.youtube.com/shorts/'
 api_key = 'AIzaSyCLz3kxvqVgXIxRYl73qs-ejBUjHrtjJ0g'
 youtube = build('youtube', 'v3', developerKey=api_key)
 
@@ -12,7 +14,8 @@ def query_search(search_keywords: str):
         part="snippet",
         q=search_keywords,
         type="video",
-        videoEmbeddable="true"
+        videoEmbeddable="true",
+        order='viewCount'
     )
 
     search_response = search_request.execute()
@@ -32,8 +35,18 @@ def query_embed(vid_id: str):
 
 
 def get_vid_id(response: dict):
-    video_id  = response['items'][0]['id']['videoId']
-    return video_id
+    final_video_id = None
+    for vid in response['items']: 
+        video_id  = vid['id']['videoId']
+        url = url_shorts_base + video_id
+        r = requests.get(url, allow_redirects=False)
+        if r.status_code == 200:
+            pass
+        else:
+            final_video_id = video_id
+
+
+    return final_video_id
 
 
 def get_embed_code(response: dict):
@@ -41,13 +54,12 @@ def get_embed_code(response: dict):
     return embed_code
 
 def main():
-    physics_search = query_search('physics majoy day in the life')
+    physics_search = query_search('physics major day in the life')
+
     vid_id = get_vid_id(physics_search)
 
     physics_embed = query_embed(vid_id)
     embed_code = get_embed_code(physics_embed)
-
-    print(embed_code)
 
     return embed_code
 
