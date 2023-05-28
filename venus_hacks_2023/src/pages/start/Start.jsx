@@ -1,8 +1,9 @@
+import Card from "../../Components/Card"
 
 
 function Start() {
     return(
-        <>Start page</>
+        <h2>Pick an area of interest!</h2>
     )
 }
 

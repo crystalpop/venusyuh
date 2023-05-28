@@ -14,14 +14,29 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
+.get-started-wrapper{
+  display:flex;
+  justify-content: center;
+
+}
+.get-started{
   font-weight: 500;
   color: white;
   text-decoration: inherit;
+  text-align: center;
+  border-style: solid;
+  background: rgba(255, 255, 255, 0.049);
+  border-width: thin;
+  display: flex;
+  width: 200px;
+  justify-content: center;
+
 }
-a:hover {
-  color: white;
+
+.get-started:hover {
+  background-color: white;
 }
+
 
 body {
   margin: 0;
@@ -33,14 +48,22 @@ body {
 
 h1 {
   font-weight: bold;
-  font-size: 10em;
-  line-height: 1.1;
-  margin: 250px;
+  font-size: 3em;
+  line-height: 0;
+  margin: 100px;
 }
 
+h2 {
+  font-weight: bold;
+  font-size: 3em;
+  line-height: 0;
+  margin: 100px;
+  text-align: center;
+}
 p {
-  font-size: 5em;
-  margin:500px;
+  font-weight: lighter;
+  font-size: 1em;
+  margin:105px;
 }
 
 .background-image {
@@ -77,10 +100,6 @@ button {
 }
 button:hover {
   background-color: #ffffff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
