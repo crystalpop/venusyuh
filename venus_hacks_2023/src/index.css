@@ -19,8 +19,53 @@
   justify-content: center;
 
 }
+
+
+.body{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.my-container {
+  display: flex;
+  padding-left: 100px;
+  padding-right: 100px;
+  
+}
+
+.my-card {
+  height: 500px;
+  width: 500px;
+  margin: 50px;
+}
+
+.image {
+  border: solid;
+  border-color: white;
+  border-radius: 500px;
+  height: 300px;
+  width: 300px; 
+}
+
+.img {
+  border: solid;
+  border-color: white;
+  border-radius: 500px;
+  height: 300px;
+  width: 300px;
+  
+}
+
+
+.my-card:hover {
+
+  cursor: pointer;
+}
+
 .get-started{
-  font-weight: 500;
+  font-weight: 200;
   color: white;
   text-decoration: inherit;
   text-align: center;
@@ -33,10 +78,25 @@
 
 }
 
+.video-responsive{
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
 .get-started:hover {
   background-color: white;
 }
 
+.bold{
+  justify-content: center;
+  display:flex;
+  font-family: Raleway;
+  font-weight: bold;
+}
 
 body {
   margin: 0;
@@ -46,24 +106,52 @@ body {
   min-height: 100vh;
 }
 
-h1 {
+.my-h1 {
+  font-family: Raleway;
+  color: white;
   font-weight: bold;
   font-size: 3em;
   line-height: 0;
   margin: 100px;
 }
 
-h2 {
+.my-h2 {
+  color: white;
   font-weight: bold;
-  font-size: 3em;
-  line-height: 0;
+  font-size: 4em;
   margin: 100px;
   text-align: center;
+  font-family: Raleway;
 }
+
+.my-h3 {
+  color: white;
+  font-weight: bold;
+  font-size: 4em;
+  text-align: center;
+  font-family: Raleway;
+  margin: 50px;
+}
+
+
 p {
   font-weight: lighter;
   font-size: 1em;
-  margin:105px;
+  color: white;
+}
+.cardp {
+  font-weight: lighter;
+  font-size: 1em;
+  padding-top: 10%;
+}
+
+.homep {
+  font-weight: lighter;
+  font-size: 1em;
+  padding-left: 10%;
+  padding-bottom: 2%;
+  padding-right: 10%;
+  line-height: 2;
 }
 
 .background-image {
@@ -77,7 +165,8 @@ p {
 
 .logo{
   width: 15%;
-  padding: 0px;
+  padding-left:2%;
+  border-bottom: white;
 
 }
 
@@ -88,7 +177,7 @@ p {
 }
 
 button {
-  border-radius: 6px black;
+  border-radius: 6px white;
   background: transparent;
   margin:250px;
   padding: 0.6em 1.2em;
@@ -104,13 +193,14 @@ button:hover {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: white;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: white;
   }
   button {
     background-color: #f9f9f9;
   }
 }
+
