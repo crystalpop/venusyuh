@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './home.css'
 
 
@@ -9,8 +9,8 @@ function Home() {
             <img src="src/assets/Logo.png" className="logo"/>
           </nav>
           <div className="my-h1">Welcome!</div>
-          <p className="homep">This is Zot Major. A web application created by a group of students dedicated to educating others interested in STEM on college majors and career pathways. Click below to start your journey.</p>
-            <a className="get-started-wrapper"><Link to ="/start" className="get-started">Get Started!</Link></a>
+          <p className="homep">This is Zot Major. A web application created by a group of students dedicated to educating others interested in STEM on UCI's available college majors and career pathways. Click below to start your journey.</p>
+            <a className="get-started-wrapper"><NavLink to ="/start" className="get-started" ><a href="#" class="link-light">Get Started!</a></NavLink></a>
       </div>
     )
 }

@@ -76,8 +76,8 @@ major = {'biosci': biosci, 'genetics': genetics, 'neurobio': neurobio, 'biochem'
 def majors(major_input):
     args = request.args["major"] 
     major_input = args.get('major')
-    desc = json.dumps(major[major_input]['description'])
-    return major[major_input]['description']
+    desc = json.dumps(major[major_input])
+    return desc
 
 
 
